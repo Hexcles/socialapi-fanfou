@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fanfou Social Service</title>
+<script type="text/javascript">
+var loc = location.href;
+var baseurl = loc.substring(0,loc.lastIndexOf('/'));
+
+var data = {
+  // currently required
+  "name": "饭否 Fanfou",
+  "origin": baseurl,
+  "iconURL": baseurl+"/fanfou16.png",
+  "icon32URL": baseurl+"/fanfou32.png",
+  "icon64URL": baseurl+"/fanfou64.png",
+
+  "shareURL": "http://fanfou.com/sharer?u=%{url}&t=%{title}",
+
+  // should be available for display purposes
+  "description": "饭否 Mozilla Social API 接口实现，通过统一的 Firefox 社交按钮快速分享页面至饭否",
+  "author": "Hexcles Ma",
+  "homepageURL": "https://github.com/Hexcles/socialapi-fanfou/",
+
+  // optional
+  "version": "0.1"
+}
+
+function activate(node) {
+  var event = new CustomEvent("ActivateSocialFeature");
+  node.setAttribute("data-service", JSON.stringify(data));
+  node.dispatchEvent(event);
+}
+</script>
+</head>
+
+<body>
+<h1>Mozilla Social API - Fanfou</h1>
+<p>饭否 Mozilla Social API 接口实现，通过统一的 Firefox 社交按钮快速分享页面至饭否。</p>
+<button onclick="activate(this)" title="安装饭否 Social API">安装饭否 Social API</button>
+<p>如需删除，请打开 Firefox 的“附加组件”，选择“服务”，即可选择卸载。</p>
+<p>Written by Hexcles (<a href="https://github.com/Hexcles/socialapi-fanfou/">GitHub</a>).</p>
+</body>
+
+</html>

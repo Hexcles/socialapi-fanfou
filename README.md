@@ -6,6 +6,8 @@
 
 如需删除，请打开 Firefox 的“附加组件”，选择“服务”，即可选择卸载。
 
+由于不是通过书签小工具（bookmarklet），因而不受 Content Security Policy 限制，可以在 GitHub 、知乎等网站正常分享。
+
 ## 感谢
 图标来自饭否官方 favicon 及 [饭否官方安卓客户端](https://github.com/mcxiaoke/fanfouapp-opensource) 资源文件。
 
